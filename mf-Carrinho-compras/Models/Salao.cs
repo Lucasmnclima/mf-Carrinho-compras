@@ -16,8 +16,8 @@ namespace CarrinhoDeComprasGestaoSalao.Models
         public string Cnpj { get; set; }
         [Required]
         public string Endereco { get; set; }
-
-        // public int Outros { get; set; }
+        [Required]
+        public int Outros { get; set; }
 
         public ICollection<Produto> Produtos { get; set; }
     }

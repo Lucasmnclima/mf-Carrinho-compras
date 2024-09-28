@@ -26,10 +26,6 @@ namespace mf_Carrinho_compras.Controllers
             return Ok(model);
         }
 
-        public AppDbContext Get_context()
-        {
-            return _context;
-        }
 
         [HttpPost]
         public async Task<ActionResult> Create(Salao model, AppDbContext _context)
@@ -51,7 +47,7 @@ namespace mf_Carrinho_compras.Controllers
             var model = await _context.Saloes
                 .FirstOrDefaultAsync(c => c.Id == id);
 
-            if (model == null) NotFound();
+            if (model == null) return NotFound();
 
             return Ok(model);
         }
