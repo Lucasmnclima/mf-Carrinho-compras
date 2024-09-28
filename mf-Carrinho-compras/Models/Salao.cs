@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace CarrinhoDeComprasGestaoSalao.Models
 {
     //[Table] fixa o padrão das tabelas. "Salão" é o nome da tabela.
-    // Teste monitoria
+
     [Table("Salao")]
     public class Salao
     {

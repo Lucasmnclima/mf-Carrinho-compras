@@ -30,7 +30,7 @@ namespace mf_Carrinho_compras.Controllers
         [HttpPost]
         public async Task<ActionResult> Create(Salao model, AppDbContext _context)
         {
-            if(model.Nome == null)
+            if(model.Cnpj == null)
             {
                 return BadRequest(new { message = "Por favor, verifique os dados e tente novamente." });
             }
@@ -72,7 +72,7 @@ namespace mf_Carrinho_compras.Controllers
         {
             var model = await _context.Saloes.FindAsync(id);
 
-            if (model == null) NotFound();
+            if (model == null) return NotFound();
 
             _context.Saloes.Remove(model);
             await _context.SaveChangesAsync();
