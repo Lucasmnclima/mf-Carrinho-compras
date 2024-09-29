@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using mf_Carrinho_compras.Models;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CarrinhoDeComprasGestaoSalao.Models
@@ -6,7 +7,7 @@ namespace CarrinhoDeComprasGestaoSalao.Models
     //[Table] fixa o padrão das tabelas. "Salão" é o nome da tabela.
 
     [Table("Salao")]
-    public class Salao
+    public class Salao : LinksHATEOS
     {
         [Key]
         public int Id { get; set; }

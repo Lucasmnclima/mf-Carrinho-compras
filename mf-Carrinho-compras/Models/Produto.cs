@@ -1,11 +1,12 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using mf_Carrinho_compras.Models;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CarrinhoDeComprasGestaoSalao.Models
 {
     //O padrão do framework é sempre em inglês. [Table] fixa o padrão das tabelas.
     [Table("Produtos")]
-    public class Produto
+    public class Produto : LinksHATEOS
     {
         //Configuração de propriedades. Uma chave e requisitos obrigatórios
         [Key]
